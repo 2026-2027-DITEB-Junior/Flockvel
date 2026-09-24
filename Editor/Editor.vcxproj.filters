@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Archivos de origen">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Archivos de encabezado">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Archivos de recursos">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Archivos de origen\ThirdParty">
+      <UniqueIdentifier>{350fad71-65e3-48eb-8cb3-8d2d4109c760}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\ThirdParty\imgui">
+      <UniqueIdentifier>{ab8b3e15-4366-4162-9e91-cacc82ec4891}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\ThirdParty\ImGuizmo">
+      <UniqueIdentifier>{366eefbb-bdb6-40c3-b9d5-a186ea7831a5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ThirdParty\imgui\imgui.cpp">
+      <Filter>Archivos de origen\ThirdParty\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\imgui\imgui_demo.cpp">
+      <Filter>Archivos de origen\ThirdParty\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\imgui\imgui_draw.cpp">
+      <Filter>Archivos de origen\ThirdParty\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\imgui\imgui_tables.cpp">
+      <Filter>Archivos de origen\ThirdParty\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\imgui\imgui_widgets.cpp">
+      <Filter>Archivos de origen\ThirdParty\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\ImGuizmo\GraphEditor.cpp">
+      <Filter>Archivos de origen\ThirdParty\ImGuizmo</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\ImGuizmo\ImCurveEdit.cpp">
+      <Filter>Archivos de origen\ThirdParty\ImGuizmo</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\ImGuizmo\ImGradient.cpp">
+      <Filter>Archivos de origen\ThirdParty\ImGuizmo</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\ImGuizmo\ImGuizmo.cpp">
+      <Filter>Archivos de origen\ThirdParty\ImGuizmo</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\ImGuizmo\ImSequencer.cpp">
+      <Filter>Archivos de origen\ThirdParty\ImGuizmo</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\ImGuizmo\ImVectorEditor.cpp">
+      <Filter>Archivos de origen\ThirdParty\ImGuizmo</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\imgui\backends\imgui_impl_opengl3.cpp">
+      <Filter>Archivos de origen\ThirdParty\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\imgui\backends\imgui_impl_sdl3.cpp">
+      <Filter>Archivos de origen\ThirdParty\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="EditorUI.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="InspectorPanel.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="ProjectPanel.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EditorEngine.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameExecution.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ThirdParty\imgui\imconfig.h">
+      <Filter>Archivos de origen\ThirdParty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\imgui\imgui.h">
+      <Filter>Archivos de origen\ThirdParty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\imgui\imgui_internal.h">
+      <Filter>Archivos de origen\ThirdParty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\imgui\imstb_rectpack.h">
+      <Filter>Archivos de origen\ThirdParty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\imgui\imstb_textedit.h">
+      <Filter>Archivos de origen\ThirdParty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\imgui\imstb_truetype.h">
+      <Filter>Archivos de origen\ThirdParty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\ImGuizmo\GraphEditor.h">
+      <Filter>Archivos de origen\ThirdParty\ImGuizmo</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\ImGuizmo\ImCurveEdit.h">
+      <Filter>Archivos de origen\ThirdParty\ImGuizmo</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\ImGuizmo\ImGradient.h">
+      <Filter>Archivos de origen\ThirdParty\ImGuizmo</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\ImGuizmo\ImGuizmo.h">
+      <Filter>Archivos de origen\ThirdParty\ImGuizmo</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\ImGuizmo\ImLightRig.h">
+      <Filter>Archivos de origen\ThirdParty\ImGuizmo</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\ImGuizmo\ImSequencer.h">
+      <Filter>Archivos de origen\ThirdParty\ImGuizmo</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\ImGuizmo\ImVectorEditor.h">
+      <Filter>Archivos de origen\ThirdParty\ImGuizmo</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\ImGuizmo\ImZoomSlider.h">
+      <Filter>Archivos de origen\ThirdParty\ImGuizmo</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorUI.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="InspectorPanel.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="ProjectPanel.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EditorEngine.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameExecution.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

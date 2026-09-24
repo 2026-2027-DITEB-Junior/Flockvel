@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="aexmath\AEXIntersection.h" />
+    <ClInclude Include="aexmath\AEXMath.h" />
+    <ClInclude Include="aexmath\AEXMathDefs.h" />
+    <ClInclude Include="aexmath\AEXMathDLL.h" />
+    <ClInclude Include="aexmath\AEXMtx33.h">
+      <Filter>Mtx</Filter>
+    </ClInclude>
+    <ClInclude Include="aexmath\AEXMtx44.h">
+      <Filter>Mtx</Filter>
+    </ClInclude>
+    <ClInclude Include="aexmath\AEXQuaternion.h">
+      <Filter>Quaternion</Filter>
+    </ClInclude>
+    <ClInclude Include="aexmath\AEXTransform2D.h">
+      <Filter>Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="aexmath\AEXTransform3D.h">
+      <Filter>Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="aexmath\AEXVec2.h">
+      <Filter>Vec</Filter>
+    </ClInclude>
+    <ClInclude Include="aexmath\AEXVec3.h">
+      <Filter>Vec</Filter>
+    </ClInclude>
+    <ClInclude Include="aexmath\AEXVec4.h">
+      <Filter>Vec</Filter>
+    </ClInclude>
+    <ClInclude Include="aexmath\AEXTransform4D.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Transform">
+      <UniqueIdentifier>{93e1d579-b20c-4b9e-9a93-04a4d35ce255}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vec">
+      <UniqueIdentifier>{e53ad485-3785-4766-a8a0-6299f0fb63c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mtx">
+      <UniqueIdentifier>{57b35f21-35cc-4d06-9ac5-1fada25e33bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quaternion">
+      <UniqueIdentifier>{cc6925d9-7cc9-4348-850e-e206e5200cd4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="aexmath\AEXMath.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\AEXIntersection.cpp" />
+    <ClCompile Include="src\AEXMtx33.cpp">
+      <Filter>Mtx</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AEXMtx44.cpp">
+      <Filter>Mtx</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AEXQuaternion.cpp">
+      <Filter>Quaternion</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AEXTransform2D.cpp">
+      <Filter>Transform</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AEXtransform3D.cpp">
+      <Filter>Transform</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AEXVec2.cpp">
+      <Filter>Vec</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AEXVec3.cpp">
+      <Filter>Vec</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AEXVec4.cpp">
+      <Filter>Vec</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AEXTransform4D.cpp" />
+  </ItemGroup>
+</Project>

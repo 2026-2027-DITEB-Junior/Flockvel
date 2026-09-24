@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="src\Controllers\CameraController.cpp">
+      <Filter>Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\Factory.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Controllers\PlayerController.cpp">
+      <Filter>Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\StateMachine\MC_states.cpp">
+      <Filter>StateMachine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\StateMachine\Node.cpp">
+      <Filter>StateMachine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\StateMachine\StateMachine.cpp">
+      <Filter>StateMachine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\RTTI.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\SceneManager.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\GameObject.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\IBase.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\IComp.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="AssetDatabase.cpp">
+      <Filter>Assets</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\Transform.cpp" />
+    <ClCompile Include="src\Logic\LogicSystem.cpp" />
+    <ClCompile Include="src\Physics\Collisions\Broadphase.cpp" />
+    <ClCompile Include="src\Physics\Collisions\Collisions.cpp" />
+    <ClCompile Include="src\Physics\Dynamics\BoxRb.cpp" />
+    <ClCompile Include="src\Physics\Dynamics\Rigidbody.cpp" />
+    <ClCompile Include="src\Physics\Dynamics\SphereRb.cpp" />
+    <ClCompile Include="src\Physics\PhysicsSystem.cpp" />
+    <ClCompile Include="src\Engine\Serialization.cpp" />
+    <ClCompile Include="src\Engine\Window.cpp" />
+    <ClCompile Include="src\Graphics\Camera.cpp" />
+    <ClCompile Include="src\Graphics\GfxSystem.cpp" />
+    <ClCompile Include="src\Graphics\GL\AEXCheckGLError.cpp" />
+    <ClCompile Include="src\Graphics\GL\AEXColor.cpp" />
+    <ClCompile Include="src\Graphics\GL\AEXGL.cpp" />
+    <ClCompile Include="src\Graphics\GL\AEXModel.cpp" />
+    <ClCompile Include="src\Graphics\GL\AEXShader.cpp" />
+    <ClCompile Include="src\Graphics\GL\AEXTexture.cpp" />
+    <ClCompile Include="src\Graphics\GL\AEXVertex.cpp" />
+    <ClCompile Include="src\Graphics\Renderable.cpp" />
+    <ClCompile Include="src\Engine\Engine.cpp" />
+    <ClCompile Include="src\Physics\Collisions\Solver.cpp" />
+    <ClCompile Include="src\InputManager\Input_Manager.cpp" />
+    <ClCompile Include="src\Resources\ResourceManager.cpp" />
+    <ClCompile Include="src\Event System\EventSys.cpp" />
+    <ClCompile Include="src\Debug\DebugSystem.cpp" />
+    <ClCompile Include="src\Audio\AudioSystem.cpp" />
+    <ClCompile Include="src\Audio\AudioSource.cpp" />
+    <ClCompile Include="src\Logic\FlashOnContact.cpp" />
+    <ClCompile Include="src\Graphics\RenderModifier.cpp" />
+    <ClCompile Include="src\DeltaTime\DeltaTime.cpp" />
+    <ClCompile Include="src\Game Mechanics\Booster.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="src\CommonHeaders.h" />
+    <ClInclude Include="src\Components\LogicComp.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Controllers\CameraController.h">
+      <Filter>Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Factory.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Singleton.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Controllers\PlayerController.h">
+      <Filter>Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\StateMachine\MC_states.h">
+      <Filter>StateMachine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\StateMachine\Node.h">
+      <Filter>StateMachine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\StateMachine\StateMachine.h">
+      <Filter>StateMachine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\RTTI.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\SceneManager.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\GameObject.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\IBase.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\IComp.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="AssetDatabase.h">
+      <Filter>Assets</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AllSingletons.h" />
+    <ClInclude Include="src\Engine\Serialization.h" />
+    <ClInclude Include="src\Engine\Transform.h" />
+    <ClInclude Include="src\Logic\LogicSystem.h" />
+    <ClInclude Include="src\Physics\Collisions\Broadphase.h" />
+    <ClInclude Include="src\Physics\Collisions\Collisions.h" />
+    <ClInclude Include="src\Physics\Collisions\Contact.h" />
+    <ClInclude Include="src\Physics\Collisions\Solver.h" />
+    <ClInclude Include="src\Physics\Dynamics\BoxRb.h" />
+    <ClInclude Include="src\Physics\Dynamics\SphereRb.h" />
+    <ClInclude Include="src\Physics\PhysicsSystem.h" />
+    <ClInclude Include="src\Physics\Dynamics\Rigidbody.h" />
+    <ClInclude Include="src\Engine\Transform.h" />
+    <ClInclude Include="src\AllSingletons.h" />
+    <ClInclude Include="src\Engine\Serialization.h" />
+    <ClInclude Include="src\API.h" />
+    <ClInclude Include="src\Engine\Window.h" />
+    <ClInclude Include="src\Graphics\Camera.h" />
+    <ClInclude Include="src\Graphics\AEXGfxDefs.h" />
+    <ClInclude Include="src\Graphics\GfxSystem.h" />
+    <ClInclude Include="src\Graphics\GL\AEXCheckGLError.h" />
+    <ClInclude Include="src\Graphics\GL\AEXColor.h" />
+    <ClInclude Include="src\Graphics\GL\AEXGL.h" />
+    <ClInclude Include="src\Graphics\GL\AEXGLRtti.h" />
+    <ClInclude Include="src\Graphics\GL\AEXGL_DLL.h" />
+    <ClInclude Include="src\Graphics\GL\AEXModel.h" />
+    <ClInclude Include="src\Graphics\GL\AEXShader.h" />
+    <ClInclude Include="src\Graphics\GL\AEXTexture.h" />
+    <ClInclude Include="src\Graphics\GL\AEXVertex.h" />
+    <ClInclude Include="src\Graphics\Renderable.h" />
+    <ClInclude Include="src\Graphics\GL\stb_image.h" />
+    <ClInclude Include="src\Graphics\tiny_obj_loader.h" />
+    <ClInclude Include="src\Engine\Engine.h" />
+    <ClInclude Include="src\InputManager\Input_Manager.h" />
+    <ClInclude Include="src\Resources\Resource.h" />
+    <ClInclude Include="src\Resources\ResourceManager.h" />
+    <ClInclude Include="src\Resources\ResourceManager.inl" />
+    <ClInclude Include="src\Event System\EventSys.h" />
+    <ClInclude Include="src\Debug\DebugSystem.h" />
+    <ClInclude Include="src\Audio\AudioSystem.h" />
+    <ClInclude Include="src\Audio\AudioSource.h" />
+    <ClInclude Include="src\Logic\FlashOnContact.h" />
+    <ClInclude Include="src\Graphics\RenderModifier.h" />
+    <ClInclude Include="src\DeltaTime\DeltaTime.h" />
+    <ClInclude Include="src\Game Mechanics\Booster.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\GameObject.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\RTTI.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\IComp.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\IBase.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\SceneManager.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="src\Components\LogicComp.h" />
+    <ClInclude Include="src\Engine\IComp.h" />
+    <ClInclude Include="src\Engine\RTTI.h" />
+    <ClInclude Include="src\Engine\SceneManager.h" />
+    <ClInclude Include="src\Engine\IBase.h" />
+    <ClInclude Include="src\CommonHeaders.h" />
+    <ClInclude Include="src\Engine\GameObject.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Components">
+      <UniqueIdentifier>{ad60f1e9-287e-4d1e-b77c-396a1af31dcd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controllers">
+      <UniqueIdentifier>{8e5633ce-9eba-4913-a41e-a14ec538c28b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{9f512add-806d-4239-b9e9-4646a79d25e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic">
+      <UniqueIdentifier>{562ed503-0a64-46a4-bac9-73ff2c4c8fcc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Render">
+      <UniqueIdentifier>{3cf87797-ba82-41aa-be92-451be80e4616}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Render\object_manager">
+      <UniqueIdentifier>{37d2b70c-6030-4e6d-8524-3ae587988070}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StateMachine">
+      <UniqueIdentifier>{070854fe-ca37-4efb-9c9f-798aaf1069ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{f74d6476-1c50-48ad-9cd8-1101217a01b0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
