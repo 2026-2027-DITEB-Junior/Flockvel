@@ -25,6 +25,24 @@ namespace clc
 	static GLint	gMajorVersion = 4;
 	static GLint	gMinorVersion = 2;
 
+	static GLuint CreateRenderTarget(int width, int height, GLenum internalFormat, GLenum format, GLenum type) {
+		GLuint texture = 0;
+		glGenTextures(1, &texture);
+		glBindTexture(GL_TEXTURE_2D, texture);
+
+		glTexImage2D(GL_TEXTURE_2D, 0, internalFormat, width, height, 0, format, type, NULL);
+
+		// no mipmaps and no wrapping
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+
+		glBindTexture(GL_TEXTURE_2D, 0); // unbind
+
+		return texture;
+	}
+
 	// ---------------------------------------------------------------------------
 	bool Graphics::Initialize()
 	{
@@ -169,7 +187,10 @@ namespace clc
             // set camera matrix in the shader
             if (ren->mpShader) {
                 ren->mpShader->Bind();
-                ren->mpShader->SetUniform("mtxViewProj", viewProj);
+				ren->mpShader->SetUniform("projection", viewProj);
+				ren->mpShader->SetUniform("diffuseTex", 0);
+				ren->mpShader->SetUniform("specularTex", 1);
+				ren->mpShader->SetUniform("normalTex", 2);
             }
 
             for (auto mod : ren->modifiers)
@@ -263,6 +284,32 @@ namespace clc
 		mSkyboxModel = rsc.GetModel("skybox.obj");
 		mSkyboxShader = rsc.GetShader("Skybox.shader");
 		#pragma endregion
+	}
+
+	void Graphics::InitGBuffer() {
+		glGenFramebuffers(1, &mGBuffer);
+		glBindFramebuffer(GL_FRAMEBUFFER, mGBuffer);
+
+		// pos and normals need floats
+		mGPosition = CreateRenderTarget(mTargetWidth, mTargetHeight, GL_RGBA16F, GL_RGBA, GL_FLOAT);
+		mGNormal = CreateRenderTarget(mTargetWidth, mTargetHeight, GL_RGBA16F, GL_RGBA, GL_FLOAT);
+		mGDiffuse = CreateRenderTarget(mTargetWidth, mTargetHeight, GL_RGBA8, GL_RGBA, GL_UNSIGNED_BYTE);
+		mGDepth = CreateRenderTarget(mTargetWidth, mTargetHeight, GL_DEPTH_COMPONENT24, GL_DEPTH_COMPONENT, GL_FLOAT);
+
+		glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, mGPosition, 0);
+		glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT1, GL_TEXTURE_2D, mGNormal, 0);
+		glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT2, GL_TEXTURE_2D, mGDiffuse, 0);
+		glFramebufferTexture2D(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_TEXTURE_2D, mGDepth, 0);
+
+		// the 3 of them are written on the same pass
+		GLenum attachments[3] = { GL_COLOR_ATTACHMENT0, GL_COLOR_ATTACHMENT1, GL_COLOR_ATTACHMENT2 };
+		glDrawBuffers(3, attachments);
+
+		if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE) {
+			std::cerr << "Error: GBuffer framebuffer is not complete." << std::endl;
+		}
+
+		glBindFramebuffer(GL_FRAMEBUFFER, 0);
 	}
 
 	// ------------------------------------------------------------------------

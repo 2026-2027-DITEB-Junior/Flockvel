@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "GfxSystem.h"
 #include "Renderable.h"
+#include <GL/glew.h>
 #include "GL/AEXShader.h"
 //#include <iostream>
 #include "AEXGfxDefs.h"
@@ -88,6 +89,7 @@ namespace clc {
 		// bind step
 		if (bind) {
 
+			
 			// set blend mode
 			clcGraphics.SetBlendMode(mBlendMode);
 
@@ -103,6 +105,11 @@ namespace clc {
                 else if (transform != nullptr)
                     modelMatrix = transform->WorldMtx();
                 mpShader->SetUniform("mtxModel", modelMatrix);
+
+				mpShader->SetUniform("gPosition", 0);
+				mpShader->SetUniform("gNormal", 1);
+				mpShader->SetUniform("gDiffuse", 2);
+				mpShader->SetUniform("gDepth", 3);
 
 				// bind texture
 				if (mpTexture) {

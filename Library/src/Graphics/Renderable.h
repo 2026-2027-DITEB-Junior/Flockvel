@@ -44,7 +44,7 @@ namespace clc {
 		// Instead, they are set during the loading process.
 
 		// model containing the vertex data. Required for rendering
-		GL::Model* mpMesh = nullptr;				
+		GL::Model* mpMesh = nullptr;			
 
 		// shader program used to draw the model. Required for rendering
 		GL::ShaderProgram* mpShader = nullptr;		

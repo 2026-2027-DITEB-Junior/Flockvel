@@ -13,6 +13,7 @@
 #include "GL/AEXVertex.h"
 #include "GL/AEXModel.h"
 #include "../Engine/Singleton.h"
+#include <GL/glew.h>
 #include "AEXGfxDefs.h"
 #include <list>
 #include <glm/gtc/constants.hpp>
@@ -55,6 +56,7 @@ namespace clc
 		Window* windowSys;
 		void PresentFrame(GL::Model* pM, GL::ShaderProgram* pS);
 		void InitFrameBuffer();
+		void InitGBuffer();
 		void ResetRenderer();
 		void SetClearColor(const Color & col);
 		void ClearFrameBuffer();
@@ -127,6 +129,14 @@ namespace clc
 		unsigned int mSkyboxTexture = 0;
 		GL::Model* mSkyboxModel = nullptr;
 		GL::ShaderProgram* mSkyboxShader = nullptr;
+
+		// gbuffer targets and the depth
+		GLuint mGBuffer = 0;
+		GLuint mGPosition = 0;
+		GLuint mGNormal = 0;
+		GLuint mGDiffuse = 0;
+		GLuint mGDepth = 0;
+
 
 		// Gui
 		//bool InitializeGui();
